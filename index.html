@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/application.js"></script>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Shopping Cart</h1>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-responsive ">
+          <tbody>
+            <tr>
+              <td class="item">Cereal</td>
+              <td class="price">10.00</td>
+              <td></td>
+              <td class="number"><label for="quantity">QTY</label><input type="text"></td>
+              <td><button class="button remove">Remove</button></td>
+              <td class='subtotal'></td>
+            </tr>
+            <tr>
+              <td class="item">Milk</td>
+              <td class="price">5.00</td>
+              <td></td>
+              <td class="number"><label for="quantity">QTY</label><input type="text"></td>
+              <td><button class="button remove">Remove</button></td>
+              <td class='subtotal'></td>
+            </tr>
+            <tr>
+              <td class="item">Chicken</td>
+              <td class="price">15.00</td>
+              <td></td>
+              <td class="number"><label for="quantity">QTY</label><input type="text"></td>
+              <td><button class="button remove">Remove</button></td>
+              <td class="subtotal"></td>
+            </tr>
+            <tr>
+              <td class="item">Coffee</td>
+              <td class="price">8.00</td>
+              <td></td>
+              <td class="number"><label for="quantity">QTY</label><input type="text"></td>
+              <td><button class="button remove">Remove</button></td>
+              <td class="subtotal"></td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <button class="button" id="calculate">Calculate Price</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2 class="total ">Total: </h2>
+              </td>
+            </tr>
+
+
+          </tbody>
+
+        </table>
+
+      </div>
+      <form id="addItem">
+
+        <input type="text" name="item" placeholder="item" class="addNewItem">
+
+
+        <input type="text" name="price" placeholder="price" class="addNewItem">
+
+
+        <button class="button">Create</button>
+
+
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
