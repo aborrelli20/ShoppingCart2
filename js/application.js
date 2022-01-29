@@ -1,3 +1,4 @@
+var total = 0;
 $(document).ready(function () {
 
   window.addEventListener('keyup', function (event) {
@@ -24,5 +25,18 @@ $(document).ready(function () {
   $(document).on('click', '.remove', function (event) {
     $(this).closest('tr').remove();
   });
+  $(document).on('click', '#calculate', function () {
+    $('tbody tr').each(function (i, ele) {
+      var sub = $(ele).children('.subtotal').html();
+      sub = parseFloat(sub == null ? "0" : sub);
+      total += sub;
+      if (sub > 0) {
+        total = total;
+      }
+      var calculate = document.querySelector('.total');
 
+      calculate.innerText = "Total: " + total;
+
+    });
+  });
 });
