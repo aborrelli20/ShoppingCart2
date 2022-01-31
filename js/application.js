@@ -1,13 +1,13 @@
-var total = 0;
+var subtotal;
+var sub
 $(document).ready(function () {
 
   window.addEventListener('keyup', function (event) {
     $('tbody tr').each(function (i, ele) {
       var price = parseInt($(ele).find('.price').text());
       var number = $(ele).find('.number').children('input').val();
-      var subtotal = price * number;
+      subtotal = price * number;
       $(ele).children('.subtotal').html(subtotal);
-      return subtotal;
     });
   });
 
@@ -25,7 +25,10 @@ $(document).ready(function () {
   $(document).on('click', '.remove', function (event) {
     $(this).closest('tr').remove();
   });
+
+
   $(document).on('click', '#calculate', function () {
+    var total = 0;
     $('tbody tr').each(function (i, ele) {
       var sub = $(ele).children('.subtotal').html();
       sub = parseFloat(sub == null ? "0" : sub);
@@ -36,7 +39,8 @@ $(document).ready(function () {
       var calculate = document.querySelector('.total');
 
       calculate.innerText = "Total: " + total;
-
     });
   });
 });
+
+
